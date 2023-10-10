@@ -1,4 +1,4 @@
-# filestorage
+# filestore
 > CTF - currently a work in progress.
 
 ## implemented
