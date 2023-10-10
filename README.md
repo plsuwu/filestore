@@ -1,7 +1,13 @@
 # filestore
-> CTF - currently a work in progress.
+
+> work in progress.
 
 ## implemented
+
+currently contains:
+
+- node.js clientside - built in sveltekit using "typescript" & tailwindcss,
+- some php/nginx stuff happening serverside because i wanted a quick and easy way to allow for arbitrary code execution.
 
 - webapp
     - client could use some work + code cleanup
