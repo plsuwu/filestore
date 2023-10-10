@@ -14,12 +14,16 @@
 
 - finish socket binding misconfiguration
 
-and then add all the other stuff post-sandbox escape:
+> deploy as a VM by this stage
+
+add all the other stuff post-sandbox escape:
 
 - sshd
 - privesc
 - ??
 - etc
+
+
 
 ## install & run
 
