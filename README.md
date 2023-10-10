@@ -7,14 +7,12 @@
     - client could use some work + code cleanup
     - server could also use some work but im probably not going to bother
 - containerization
-    - `docker-compose` builds and runs the webapp sufficiently
+    - `docker-compose.yaml` to build and run the web service
     - docker breakout yet to work (some things going on in the `docker-compose.yaml`)
 
 ## todo
 
 - finish socket binding misconfiguration
-
-> deploy as a VM by this stage
 
 add all the other stuff post-sandbox escape:
 
@@ -23,7 +21,7 @@ add all the other stuff post-sandbox escape:
 - ??
 - etc
 
-
+> ideally deployed in a VM before finalization
 
 ## install & run
 
