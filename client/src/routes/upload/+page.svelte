@@ -1,8 +1,9 @@
 <script lang="ts">
 	import BaselineUpload from '~icons/ic/BaselineUpload';
-	import { user } from '$lib/store';
+	import { user, apiUrl } from '$lib/store';
 
-	// constant any abuse throughout this file; fix when core functionality is done.
+
+	// constant any abuse throughout this file; might fix at some point
 	let clientId = $user;
 	let uploading: boolean = false;
 	let uploadStatus: any = null;
@@ -13,7 +14,7 @@
 	async function upload(event: any) {
 		uploading = true;
 		uploadStatus = null; // reset status message
-		await sleep(1280); // visual feedback
+		await sleep(1100); // visual feedback
 
 		const formElement = event.target; // cache form element
 		const fileInput = formElement.elements.file;
@@ -23,7 +24,7 @@
 		data.append('clientId', clientId); // type safety moment
 
 		try {
-			const response = await fetch('http://localhost:8080/upload.php', {
+			const response = await fetch(`${apiUrl}/upload.php`, {
 				method: 'POST',
 				body: data
 			});
@@ -35,13 +36,13 @@
 
 			// update status on successful upload
 			const result = await response.json();
-			uploadStatus = result; 
+			uploadStatus = result;
 		} catch (error) {
 			// log caught error and update status on failed upload
 			console.error('upload failed:', error);
-			uploadStatus = `encountered an issue while uploading file: ${error}`; 
+			uploadStatus = `encountered an issue while uploading file: ${error}`;
 		} finally {
-			 // indicate finalized load and reset the form state after all actions complete
+			// indicate finalized load and reset the form state after all actions complete
 			uploading = false;
 			formElement.reset();
 		}

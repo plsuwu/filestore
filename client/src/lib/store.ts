@@ -4,6 +4,10 @@ import md5 from 'crypto-js/md5';
 // really bad types
 export const creatingUid = writable<boolean>(false);
 export const user = writable<string | null>(null);
+
+// can't figure out the .env system and im not going to bother atm lol
+export const apiUrl: string = 'http://localhost:8080';
+
 const sleep = (time: number | undefined) => new Promise((resolve) => setTimeout(resolve, time));
 
 let testUid: string;
@@ -19,7 +23,7 @@ export async function increment() {
 		do {
             // might be fun to also have an IDOR vuln so this is hashed in an obvious manner
 			testUid = md5(i.toString()).toString(); 
-			const response = await fetch(`http://localhost:8080/query_uid.php?uid=${testUid}`, {
+			const response = await fetch(`${apiUrl}/query_uid.php?uid=${testUid}`, {
 				method: 'POST',
 				body: testUid
 			});

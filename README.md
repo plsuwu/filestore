@@ -1,29 +1,34 @@
 # filestore
-> CTF - currently a work in progress.
+
+> work in progress.
 
 ## implemented
+
+currently contains:
+
+- node.js clientside - built in sveltekit using "typescript" & tailwindcss,
+- some php/nginx stuff happening serverside because i wanted a quick and hacky rce vulnerability.
 
 - webapp
     - client could use some work + code cleanup
     - server could also use some work but im probably not going to bother
+    - doesn't work as expected on google cloud VM; 
+        - might need to reference non-localhost address when making api calls from the client?? 
 - containerization
-    - `docker-compose` builds and runs the webapp sufficiently
-    - docker breakout yet to work (some things going on in the `docker-compose.yaml`)
+    - `docker-compose.yaml` to build and run the web service
 
 ## todo
 
-- finish socket binding misconfiguration
+- finish socket binding misconfiguration sandbox escape 
 
-> deploy as a VM by this stage
+and then also all the other stuff post-sandbox escape:
 
-add all the other stuff post-sandbox escape:
-
-- sshd
-- privesc
+- configure machine + sshd
+- privesc stuff
 - ??
 - etc
 
-
+> ideally allow for VM deployment before finalization
 
 ## install & run
 

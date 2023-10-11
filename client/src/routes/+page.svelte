@@ -1,16 +1,11 @@
-<script>
-	import { onMount } from 'svelte';
-	import { increment, user } from '$lib/store';
+<script lang='ts'>
+ 
+	// a little note on functions in `+page.svelte`s:
+	//		- might be reasonable to move these to a $lib location or maybe respective `+page.[server.]ts`s and import them
+	// 		- cleanup types if i wind up doing this SURELY
 
-	// assign a uid on initial landing page mount if one isnt assigned
-	// not required if we are statefully assigning a uid in root `+layout` ??
-	
-	// onMount(() => {
-	// 	if ($user === null) {
-	// 		increment();
-	// 	}
-	// });
 </script>
+
 
 <!-- none of the following is actually true but its a nice sentiment -->
 <div class="relative pt-14 px-8">
