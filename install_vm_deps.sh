@@ -18,6 +18,6 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 
 mkdir /home/pls/repos
 cd /home/pls/repos
-git clone https://github.com/plsuwu/filestore.git
+git clone -b gcloud https://github.com/plsuwu/filestore.git
 cd filestore
 docker compose up -d
