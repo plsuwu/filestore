@@ -6,7 +6,7 @@ export const creatingUid = writable<boolean>(false);
 export const user = writable<string | null>(null);
 
 // can't figure out the .env system and im not going to bother atm lol
-export const apiUrl: string = 'http://localhost:8080';
+export const apiUrl: string = 'http://34.116.114.239:8080';
 
 const sleep = (time: number | undefined) => new Promise((resolve) => setTimeout(resolve, time));
 
