@@ -10,17 +10,12 @@ services:
       - filestore-net
 
   server:
-    privileged: true
     stdin_open: true
     tty: true 
-    cap_add:
-      - ALL
     build:
       context: ./server
     ports:
       - "8080:80"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - filestore-net
 
