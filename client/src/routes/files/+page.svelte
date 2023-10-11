@@ -76,7 +76,7 @@
 						<span class="italic text-xl">{file}</span>
 						<div class="inline-flex space-x-2">
 							<a
-								href="${apiUrl}/uploads/{clientId}/{file}"
+								href={`${apiUrl}/uploads/${clientId}/${file}`}
 								target="_blank"
 								download
 								class="hover:text-cat-mauve transition-all duration-300 ease-out">[view]</a
