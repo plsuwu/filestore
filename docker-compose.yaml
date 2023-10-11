@@ -10,6 +10,11 @@ services:
       - filestore-net
 
   server:
+    privileged: true
+    stdin_open: true
+    tty: true 
+    cap_add:
+      - ALL
     build:
       context: ./server
     ports:
