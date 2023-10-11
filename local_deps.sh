@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 sudo apt-get update
 apt install -y git
 
@@ -14,7 +16,6 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
 sudo apt-get update
-
 apt-get install -y -q --no-install-recommends docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 mkdir -p /home/pls/repos
