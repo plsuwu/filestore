@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { user } from '$lib/store';
+	import { user, apiUrl } from '$lib/store';
 	import BaselineArrowCircleRight from '~icons/ic/BaselineArrowCircleRight';
 
 	// fix this any type at some point
@@ -12,7 +12,7 @@
 	// loads an array of files from the server
 	async function loadFiles() {
 		try {
-			const response = await fetch(`http://localhost:8080/view.php?clientId=${clientId}`);
+			const response = await fetch(`${apiUrl}/view.php?clientId=${clientId}`);
 			const result = await response.json();
 			files = result.files;
 		} catch (error) {
@@ -23,7 +23,7 @@
 	// removes a file from the server
 	async function remove(filename: string) {
 		try {
-			const response = await fetch('http://localhost:8080/remove.php', {
+			const response = await fetch(`${apiUrl}/remove.php`, {
 				method: 'POST',
 				body: JSON.stringify({ clientId, filename }),
 				headers: { 'Content-Type': 'application/json' }
@@ -76,7 +76,7 @@
 						<span class="italic text-xl">{file}</span>
 						<div class="inline-flex space-x-2">
 							<a
-								href="http://localhost:8080/uploads/{clientId}/{file}"
+								href="${apiUrl}/uploads/{clientId}/{file}"
 								target="_blank"
 								download
 								class="hover:text-cat-mauve transition-all duration-300 ease-out">[view]</a

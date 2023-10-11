@@ -6,6 +6,8 @@ services:
       context: ./client
     ports:
       - "3000:3000"
+    networks:
+      - filestore-net
 
   server:
     build:
@@ -14,3 +16,9 @@ services:
       - "8080:80"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - filestore-net
+
+networks:
+  filestore-net:
+    driver: bridge

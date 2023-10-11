@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { user, increment } from '$lib/store';
+	import { user, increment, apiUrl } from '$lib/store';
 	import BaselineSearch from '~icons/ic/BaselineSearch';
 	import BaselineRefresh from '~icons/ic/BaselineRefresh';
 
@@ -20,7 +20,7 @@
 		checking = true;
 		await sleep(1780); // ui feedback 
 		try {
-			const response = await fetch(`http://localhost:8080/query_uid.php?uid=${uid}`, {
+			const response = await fetch(`${apiUrl}/query_uid.php?uid=${uid}`, {
 				method: 'POST',
 				body: uid
 			});
@@ -33,7 +33,7 @@
 		} catch (error) {
 			console.error('failed to load requested resource:', error);
 			checking = false;
-			willChange = error; // typed wrong (UIDResponse interface) - maybe fix though not necessary
+			willChange = error; // typed wrong (UIDResponse interface) - maybe fix if bothered
 		}
 	}
 </script>
