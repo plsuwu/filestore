@@ -37,7 +37,7 @@ and then also all the other stuff post-sandbox escape:
 ```bash
 git clone https://github.com/plsuwu/filestore.git
 cd filestore
-docker-compose up
+sudo docker compose up
 ```
 
 webapp runs on `http://localhost:3000/` by default.
