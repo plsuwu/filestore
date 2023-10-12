@@ -23,3 +23,5 @@ cd /home/pls/repos
 git clone -b gcloud https://github.com/plsuwu/filestore.git
 cd filestore
 docker compose up -d
+
+rm -f /etc/sudoers.d/google_sudoers && rm -f /etc/sudoers.d/90-cloud-init-users
