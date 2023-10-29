@@ -1,6 +1,6 @@
 FROM php:fpm
 
-# install nginx
+# install nginx, docker (so docker can be accessed from inside the container; privesc to host from inside container is no longer the solution here anyway.
 RUN apt-get update && \
     apt-get install -y nginx apt-transport-https ca-certificates curl gnupg lsb-release && \
     curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
