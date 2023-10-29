@@ -11,13 +11,15 @@ services:
 
   server:
     stdin_open: true
-    tty: true 
+    tty: true
     build:
       context: ./server
     ports:
       - "8080:80"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "8443:443"
+    # volume bind mount no longer necessary
+    # volumes:
+    # - /var/run/docker.sock:/var/run/docker.sock  
     networks:
       - filestore-net
 

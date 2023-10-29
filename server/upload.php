@@ -37,7 +37,7 @@ if ($_FILES && isset($_POST['clientId'])) {
         // move the uploaded file from tmp dir to indentified directory
         if (move_uploaded_file($_FILES['file']['tmp_name'], "$user_upload_dir/$uniqueFilename")) {
 
-            // respond (surely this can be done better?? php is dogshit i hate it i hate it i hate it i hate it i hate it)
+            // respond
             header("Content-Type: application/json");
             echo json_encode(['status' => 'success', 'message' => 'upload successful!', 'filename' => $uniqueFilename]);
         } else {

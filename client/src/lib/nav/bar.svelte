@@ -6,7 +6,8 @@
 	import BaselineCloudUpload from '~icons/ic/BaselineCloudUpload';
 	import BaselineAccountBox from '~icons/ic/BaselineAccountBox';
 	import BaselineFolder from '~icons/ic/BaselineFolder';
-// fix the unplug-icons directory recognition thing ↑↑
+	import NoteAlert from '~icons/mdi/note-alert';
+	// fix the unplug-icons directory recognition thing
 
 	// define an array of navigation objects to map over
 	const links: { name: string; href: string; icon: any }[] = [
@@ -29,7 +30,12 @@
 			name: 'my files',
 			href: '/files',
 			icon: BaselineFolder
-		}
+		},
+		{
+			name: 'an important note',
+			href: '/important',
+			icon: NoteAlert
+		},
 	];
 	let tooltip: boolean = false;
 

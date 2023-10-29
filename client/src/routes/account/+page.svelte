@@ -84,9 +84,6 @@
 			<div class="text-cat-overlay0 italic text-justify">
 				if you want to create a new identifier, please use the 'generate' button.
 			</div>
-			<div class="text-cat-overlay0 italic mb-10 text-justify">
-				finally, please note that we do not support custom IDs at this time.
-			</div>
 		{/if}
 	</div>
 </div>
