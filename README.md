@@ -6,7 +6,7 @@ This was a project for a uni assignment, and I may or may not bother coming back
 
 ## install & run
 
-Part of the `install.sh` will change your root password (see the script for more info; runs via ), so ideally - set up an Ubuntu Server VM instance with like, Virtualbox or something (I would imagine there are extra steps to configure networking). 
+Part of the `install.sh` will change your root password (see the script for more info), so ideally use this on an Ubuntu Server VM instance with like, Virtualbox or something. 
 
 Can't promise this will work as intended but feel free to give it a go; I remember having to make some changes by hand but I think it will now work as intended (I cannot be bothered to test it).
 
