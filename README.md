@@ -1,12 +1,22 @@
 # filestore
 
-This is just the web application portion. 
+Boot to root-type CTF challenge. 
 
-All required dependencies should be installable on a fresh Ubuntu instance using the `install.sh` script (though this may be incorrectly configured as some components were added by hand) -- **note that this will clone this repository and run `docker compose up` to run the webapp**.
+This was a project for a uni assignment, and I may or may not bother coming back to this to tidy it up (code was not required as part of the final submission so its pretty rough).
 
 ## install & run
 
-`docker-compose.yaml` in root dir is sufficient to build and run the webapp client & server as a docker container. 
+Part of the `install.sh` will change your root password (see the script for more info; runs via ), so ideally set up an Ubuntu Server VM instance with like, Virtualbox or something idk.
+
+Can't promise this will work as intended but feel free to give it a go; I remember having to make some changes by hand but I think it will now work as intended (I cannot be bothered to test it).
+
+```
+curl https://raw.githubusercontent.com/plsuwu/filestore/main/install.sh | sh 
+```
+
+### just the webserver
+
+Otherwise, you can clone the repo and run `docker-compose.yaml` to build and run the webapp client & backend in a docker container for a little initial foothold demo or whatever. 
 
 ```bash
 git clone https://github.com/plsuwu/filestore.git
