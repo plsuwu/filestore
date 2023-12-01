@@ -24,4 +24,4 @@ cd filestore
 sudo docker compose up # or `docker-compose up` on windows maybe.
 ```
 
-webapp front-end exposed on port 3000 by default (ie, `http://localhost:3000/`, for example).
+webapp front-end exposed on port 3000 by default (e.g `http://localhost:3000/`).
