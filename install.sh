@@ -26,6 +26,6 @@ apt-get install -y -q --no-install-recommends docker-ce docker-ce-cli containerd
 # clone this git repo & run the ctr with compose
 mkdir -p /home/pls/repos
 cd /home/pls/repos
-git clone https://github.com/plsuwu/filestore.git
+git clone https://github.com/plsuwu/filestore.git # /home/pls/repos
 cd filestore
 docker compose up -d
