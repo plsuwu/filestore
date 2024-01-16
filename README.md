@@ -11,7 +11,7 @@ Part of the `install.sh` will change your root password (see the script for more
 Can't promise it works flawlessly but as long as you're sandboxed it should be 90% of the way there; I remember having to make some system changes by hand and I have modified the script to hopefully correct for this, but ultimately I cannot be bothered to test it.
 
 **install via curl**:
-```
+```sh
 # run as root; do `su -` or something
 
 curl https://raw.githubusercontent.com/plsuwu/filestore/main/install.sh | sh 
@@ -21,7 +21,7 @@ curl https://raw.githubusercontent.com/plsuwu/filestore/main/install.sh | sh
 
 Otherwise, you can clone the repo and run `docker-compose.yaml` to build and run the webapp client + backend portion for a very simple PHP reverse shell demo. 
 
-```bash
+```sh
 git clone https://github.com/plsuwu/filestore.git
 cd filestore
 sudo docker compose up # or `docker-compose up` on windows maybe.
