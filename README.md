@@ -10,7 +10,10 @@ Part of the `install.sh` will change your root password (see the script for more
 
 Can't promise it works flawlessly but as long as you're sandboxed it should be 90% of the way there; I remember having to make some system changes by hand and I have modified the script to hopefully correct for this, but ultimately I cannot be bothered to test it.
 
+**install via curl**:
 ```
+# run as root; do `su -` or something
+
 curl https://raw.githubusercontent.com/plsuwu/filestore/main/install.sh | sh 
 ```
 
